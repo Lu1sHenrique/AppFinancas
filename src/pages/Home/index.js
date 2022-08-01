@@ -10,7 +10,7 @@ const list = [
         label: "Boleto Conta Luz",
         value: "390,90",
         date: "17/05/2022",
-        type: 0 //despesas
+        type: 0 //despesas 
     },
     {
         id: 2,
