@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, Statusbar, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import {MotiView, MotiText} from 'moti'
 
@@ -47,7 +47,7 @@ export default function Header({name}){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: '#8000ff',
+        backgroundColor: '#fd8fd3',
         flexDirection: 'row',
         paddingStart: 16,
         paddingEnd: 16,

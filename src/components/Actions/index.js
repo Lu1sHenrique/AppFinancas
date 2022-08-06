@@ -1,23 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import {AntDesign} from '@expo/vector-icons'
+import {AntDesign, Foundation} from '@expo/vector-icons'
 
 export default function Actions() {
  return (
     <ScrollView style={styles.container} horizontal={true} showsHorizontalScrollIndicator={false}>
         <TouchableOpacity style={styles.actionButton}> 
             <View style={styles.areaButton}>
-                <AntDesign name="addfolder" size={26} color="#000"/>
+                <Foundation name="dollar-bill" size={26} color="#000"/>
             </View>
-            <Text style={styles.labelButton}>Entradas</Text>
+            <Text style={styles.labelButton}>Realizar</Text>
+            <Text>pagamento</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity style={styles.actionButton}> 
-            <View style={styles.areaButton}>
-                <AntDesign name="tagso" size={26} color="#000"/>
-            </View>
-            <Text style={styles.labelButton}>Compras</Text>
-        </TouchableOpacity>  
 
         <TouchableOpacity style={styles.actionButton}> 
             <View style={styles.areaButton}>
@@ -35,7 +29,7 @@ export default function Actions() {
 
         <TouchableOpacity style={styles.actionButton}> 
             <View style={styles.areaButton}>
-                <AntDesign name="setting" size={26} color="#000"/>
+                <AntDesign name="user" size={26} color="#000"/>
             </View>
             <Text style={styles.labelButton}>Conta</Text>
         </TouchableOpacity> 
