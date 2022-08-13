@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View } from 'react-native';
 import { MotiView } from 'moti';
+import styles from './styles';
+
 
 export default function Balance({ saldo, gastos }) {
  return (
@@ -38,46 +40,4 @@ export default function Balance({ saldo, gastos }) {
    </MotiView>
   );
 }
-
-const styles = StyleSheet.create({
-    container: {
-      backgroundColor: '#fff',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingStart: 18,
-      paddingEnd: 18,
-      marginTop: -24,
-      marginStart: 14,
-      marginEnd: 14,
-      borderRadius: 4,
-      paddingTop: 22,
-      paddingBottom: 22,
-      zIndex: 99
-    },
-
-    itemTitle:{
-        fontSize: 20,
-        color: '#bababa',
-    },
-
-    content:{
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    currencySimbol:{
-        color: '#dadada',
-        marginRight: 6
-    },
-
-    balance:{
-        fontSize: 22,
-        color: '#2ecc71'
-    },
-
-    expenses:{
-        fontSize: 22,
-        color: '#e74c3c'
-    }
-  });
   

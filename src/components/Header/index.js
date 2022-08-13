@@ -1,7 +1,8 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import {MotiView, MotiText} from 'moti'
+import styles from "./styles";
 
 export default function Header({name}){
     return(
@@ -44,40 +45,6 @@ export default function Header({name}){
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container:{
-        backgroundColor: '#fd8fd3',
-        flexDirection: 'row',
-        paddingStart: 16,
-        paddingEnd: 16,
-        paddingBottom: 44,
-        paddingTop: 44
-    },
-
-    content:{
-        flex: 1,
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-
-    userName:{
-        fontSize: 18,
-        color: '#fff',
-        fontWeight: 'bold'
-    },
-
-    buttonUser:{
-        width: 44,
-        height: 44,
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 44 / 2
-    }
-
-})
 
 
 

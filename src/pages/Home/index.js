@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
+import styles from './styles';
 
 const list = [
     {
@@ -50,21 +51,3 @@ export default function Home() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fafafa'
-  },
-
-  title:{
-    fontSize: 18,
-    fontWeight: 'bold',
-    margin: 14
-  },
-
-  list:{
-    marginStart: 14,
-    marginEnd: 14
-  }
-});

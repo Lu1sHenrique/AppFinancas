@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { MotiView, AnimatePresence, MotiText } from 'moti';
+import styles from './styles';
 
 export default function Movements({data}) {
 
@@ -50,49 +51,3 @@ export default function Movements({data}) {
    </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginBottom: 24,
-      borderBottomWidth: 0.5,
-      borderBottomColor: '#dadada'
-    },
-  
-    content:{
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 2,
-      marginBottom: 8
-    },
-  
-    date:{
-      color: '#dadada',
-      fontWeight: 'bold',
-    },
-
-    label:{
-      fontWeight: 'bold',
-      fontSize: 16
-    },
-
-    value:{
-      fontSize: 16,
-      color: '#2ecc71',
-      fontWeight: 'bold'
-    },
-
-    expenses:{
-      fontSize: 16,
-      color: '#e74c3c',
-      fontWeight: 'bold'
-    },
-
-    skeleton:{
-      marginTop: 6,
-      width: 80,
-      height: 10,
-      backgroundColor: '#dadada',
-      borderRadius: 8
-    }
-  });
