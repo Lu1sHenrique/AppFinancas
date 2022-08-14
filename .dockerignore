@@ -1,7 +1,31 @@
+#Geral
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+#mobile
+**/node
+**/node_modules/
+**/.expo/
+**/dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+**/web-build/
+*.DS_Store
+
+#backend
+
 HELP.md
 **/target/
-**.mvn/wrapper/maven-wrapper.jar
-!**/.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -14,11 +38,6 @@ HELP.md
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,18 +51,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-**/node_modules/
-**/.expo/
-**/dist/
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-**/web-build/
-
-# macOS
-.DS_Store
