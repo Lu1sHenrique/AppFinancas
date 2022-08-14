@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  api:
+    container_name: financas-api
+    build: financas-api
+    command: mvn spring-boot:run
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/home/usr/app
+
+  mobile:
+    container_name: financas-app
+    build: financas-app
+    command: npm start
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+      - "19006:19006"
+    environment:
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - .:/home/usr/app
