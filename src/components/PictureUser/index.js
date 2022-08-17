@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { MotiView, AnimatePresence, MotiText } from 'moti';
+import React from "react";
+import { View, Text,TouchableOpacity } from 'react-native'
+import { Feather } from '@expo/vector-icons'
+import {MotiView, MotiText} from 'moti'
+import styles from "./styles";
 
-export default function PictureUser() {
-
- return (
-    <View>
-        <Text>picture user</Text>
-    </View>
-  );
+export default function HeaderProfile(){
+    return(
+        <View style={styles.container}>
+           <TouchableOpacity style={styles.buttonUser}>
+                <Feather name="user" size={40}/>
+           </TouchableOpacity>
+        </View>
+    )
 }

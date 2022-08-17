@@ -3,20 +3,35 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
       backgroundColor: '#fafafa'
     },
   
-    title:{
-      fontSize: 18,
-      fontWeight: 'bold',
-      margin: 14
+    containerTxtAccountsConec:{
+     justifyContent: 'center',
+     alignSelf: 'center'
     },
   
-    list:{
-      marginStart: 14,
-      marginEnd: 14
-    }
-  });
+    txtAccountsConec:{
+      fontSize: 20
+    },
+
+    buttonBanco:{
+      flex: 1,
+      flexDirection: 'row',
+      borderWidth: 1,
+      width: '80%',
+      alignSelf: 'center',
+      marginVertical: 8,
+      height: 60,
+      alignItems: 'center',
+      borderRadius: 15,
+      justifyContent: 'space-around'
+  },
+
+  txtButtonBanco:{
+    fontSize: 15
+  }
+
+});
 
 export default styles;

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { Text, View, FlatList } from 'react-native';
 import Header from '../../components/Header'
 import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
