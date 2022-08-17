@@ -1,11 +1,9 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import {AntDesign, Foundation} from '@expo/vector-icons'
-import styles from './styles'
+import { View, Text, ScrollView } from 'react-native';
 
-export default function Actions() {
+export default function AccountsValue() {
  return (
-    <ScrollView style={styles.container} horizontal={true} showsHorizontalScrollIndicator={false}>
+    <ScrollView>
        <Text>accounts value</Text>
     </ScrollView>
   );

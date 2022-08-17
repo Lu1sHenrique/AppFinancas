@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { MotiView, AnimatePresence, MotiText } from 'moti';
-import styles from './styles';
 
-export default function Movements() {
+export default function PictureUser() {
 
  return (
-    <View style={styles.content}>
+    <View>
         <Text>picture user</Text>
     </View>
   );
