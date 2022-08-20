@@ -2,31 +2,28 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      maxHeight: 84,
-      marginBottom: 14,
-      marginTop: 18,
-      paddingEnd: 14,
-      paddingStart: 14
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: -25,
+      marginBottom: 20
     },
 
-    actionButton:{
-        alignItems: 'center',
-        marginRight: 32
+    containerValue:{
+      borderWidth: 1,
+      width: '60%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignSelf: 'center',
+      borderRadius: 30
     },
 
-    areaButton:{
-        backgroundColor: '#ecf0f1',
-        height: 60,
-        width: 60,
-        borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center'
+    txt:{
+        fontSize: 20,
+        marginVertical: 10
     },
 
-    labelButton:{
-        marginTop: 4,
-        textAlign: 'center',
-        fontWeight: 'bold'
+    txtName:{
+      marginBottom: 10
     }
 });
 

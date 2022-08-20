@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import {AntDesign, Foundation} from '@expo/vector-icons'
+import { View, Text, ScrollView } from 'react-native';
 import styles from './styles'
 
-export default function Actions() {
+export default function AccountsValue() {
  return (
-    <ScrollView style={styles.container} horizontal={true} showsHorizontalScrollIndicator={false}>
-       <Text>accounts value</Text>
-    </ScrollView>
+   <View style={styles.container}>
+    <View style={styles.txtName}>
+      <Text style={styles.txt}>Luis Henrique</Text>
+    </View>
+    
+
+    <View style={styles.containerValue}>
+      <Text style={styles.txt}>Valor total: 1.500,00</Text>
+
+      <Text style={styles.txt}>Valor total C/C: 500,00</Text>
+    </View>   
+   </View>
   );
 }

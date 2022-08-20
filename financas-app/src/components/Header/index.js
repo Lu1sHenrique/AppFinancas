@@ -1,10 +1,14 @@
-import React from "react";
+import React, { Profiler } from "react";
 import { View, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import {MotiView, MotiText} from 'moti'
 import styles from "./styles";
+import { useNavigation } from '@react-navigation/native'
 
 export default function Header({name}){
+
+    const navigation = useNavigation();
+
     return(
         <View style={styles.container}>
             <MotiView 
@@ -38,7 +42,11 @@ export default function Header({name}){
                 }}
                 >{name}</MotiText>
 
-                <TouchableOpacity activeOpacity={0.9} style={styles.buttonUser}>
+                <TouchableOpacity 
+                activeOpacity={0.9} 
+                style={styles.buttonUser}
+                onPress={ () => navigation.navigate('Profile')}
+                >
                     <Feather name="user" size={27} color="#fff"/>
                 </TouchableOpacity>
             </MotiView>
