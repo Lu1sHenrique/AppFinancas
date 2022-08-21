@@ -2,18 +2,18 @@ version: "3"
 
 services:
   api:
-    container_name: financas-api
-    build: financas-api
-    command: mvn spring-boot:run
+    working_dir: /home/usr/app
+    container_name: api
+    image: maven:3-adoptopenjdk-8
     ports:
       - "8080:8080"
     volumes:
-      - .:/home/usr/app
+      - "./financas-api:/home/usr/app"
+    command: mvn spring-boot:run
 
   mobile:
-    container_name: financas-app
+    container_name: app
     build: financas-app
-    command: npm start
     ports:
       - "19000:19000"
       - "19001:19001"
@@ -22,5 +22,3 @@ services:
     environment:
       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
       - CHOKIDAR_USEPOLLING=true
-    volumes:
-      - .:/home/usr/app
