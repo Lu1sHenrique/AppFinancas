@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text,TouchableOpacity } from 'react-native'
-import { Feather, Entypo } from '@expo/vector-icons'
-import {MotiView, MotiText} from 'moti'
+import { Entypo, Ionicons } from '@expo/vector-icons'
 import styles from "./styles";
 import { useNavigation } from '@react-navigation/native'
 
@@ -16,7 +15,7 @@ export default function HeaderProfile(){
                     <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     >
-                        <Feather name="arrow-left" size={30}/>
+                        <Ionicons name="chevron-back" size={30}/>
                     </TouchableOpacity>
                 </View>
 

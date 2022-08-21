@@ -3,6 +3,9 @@ import React from 'react';
 
 import Home from '../pages/Home/index'
 import Profile from '../pages/Profile/index'
+import SelectPaymentAccount from '../pages/SelectPaymentAccount';
+import PaymentInfo from '../pages/PaymentInfo';
+import SelectKeyPayment from '../pages/SelectKeyPayment';
 
 const Stack = createNativeStackNavigator();
 export default function Routes(){
@@ -19,7 +22,7 @@ export default function Routes(){
       options={{
         headerShown:false
         }}
-      />  
+    />  
 
     <Stack.Screen 
       name="Profile"
@@ -27,7 +30,31 @@ export default function Routes(){
       options={{
         headerShown:false
         }}
-      />  
+    />
+
+    <Stack.Screen 
+      name="SelectPaymentAccount"
+      component={SelectPaymentAccount}
+      options={{
+        headerShown:false
+        }}
+    />  
+
+    <Stack.Screen 
+      name="PaymentInfo"
+      component={PaymentInfo}
+      options={{
+        headerShown:false
+        }}
+    />
+
+    <Stack.Screen 
+      name="SelectKeyPayment"
+      component={SelectKeyPayment}
+      options={{
+        headerShown:false
+        }}
+    />     
     </Stack.Navigator>
   )
 }

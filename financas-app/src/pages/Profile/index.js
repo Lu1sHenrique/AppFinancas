@@ -47,7 +47,7 @@ export default function Profile() {
         <View>
           <TouchableOpacity style={styles.buttonBanco}>
             <AntDesign style={styles.iconButtonbanco} name="bank" size={23}/>
-            <Text style={styles.txtButtonBanco}>Conectar nova conta</Text>
+            <Text style={styles.txtButtonBanco}>Conectar nova conta </Text>
             <Feather style={styles.iconButtonArrow} name="arrow-right" size={15} />
           </TouchableOpacity>
         </View>
