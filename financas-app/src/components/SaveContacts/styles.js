@@ -2,16 +2,14 @@ import {StyleSheet} from 'react-native';
 
 
 const styles = StyleSheet.create({
-    buttonBanco:{
+    buttonContact:{
         flex: 1,
-        flexDirection: 'row',
-        borderWidth: 1,
+        borderBottomWidth: 1,
         width: '80%',
-        alignSelf: 'center',
+        marginStart: 15,
         marginVertical: 8,
-        height: 60,
+        height: 50,
         alignItems: 'center',
-        borderRadius: 15,
         justifyContent: 'space-around'
     },
 
