@@ -1,8 +1,9 @@
 import { Text, View, FlatList, TouchableOpacity, TextInput } from 'react-native';
-import { Feather, Ionicons } from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/native'
 import SaveContacts from '../../components/SaveContacts';
+import ButtonBack from '../../components/Utils/buttonBack'
 
 const listBancos = [
     {
@@ -48,37 +49,37 @@ export default function SelectKeyPayment() {
 
   return (
     <View style={styles.container}>
-        <View style={styles.containerHeader}>
-            <View style={styles.buttonBack}>
-                <TouchableOpacity
-                onPress={() => navigation.goBack()}
-                >
-                    <Ionicons name="chevron-back" size={30}/>
-                </TouchableOpacity>
-            </View>
-        </View>
+        <ButtonBack />
         
         <View style={styles.containerTitle}>
-            <Text style={styles.title}>Para quem você quer transferir?</Text>
-        </View>
-
-        <View style={styles.containerValue}>
-            <Text style={styles.txtValue}>Transferindo </Text>
-            <Text style={styles.value}>50,00</Text>
+            <Text style={styles.title}>Para quem você quer transferir <Text style={styles.value}>R$ 50,00</Text>?</Text>
         </View>
 
         <View style={styles.containerSubTitle}>
             <Text style={styles.subTitle}>Transfira para um novo contato ou busque na lista</Text>
         </View>
 
-        <View style={styles.containerInput}>
-            <TextInput
-            style={styles.inputKey}
-            keyboardType='numeric'
-            placeholder="Nome, CPF/CNPJ, Celular ou Email"
-            placeholderTextColor='#000'
-            >
-            </TextInput>
+        <View style={{marginVertical: 20}}>
+            <View style={styles.lineInputIcon}>
+                <TextInput
+                placeholder='CPF/CNPJ, celular, e-mail ou aleatória'
+                placeholderTextColor={"#808080"}
+                style={styles.input}
+                > 
+                </TextInput>
+            </View>
+        </View>
+
+        <View style={{marginTop: 30, marginBottom: 40}}>
+            <View style={styles.lineInputIcon}>
+                <TextInput
+                placeholder='Procura por quem?'
+                placeholderTextColor={"#808080"}
+                style={styles.input}
+                > 
+                </TextInput>
+                <Feather style={{marginEnd: 20}} name='search' size={25} color="#808080"/>
+            </View>
         </View>
         
         <FlatList 

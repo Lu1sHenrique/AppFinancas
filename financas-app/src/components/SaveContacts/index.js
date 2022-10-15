@@ -1,5 +1,5 @@
 import React from "react";
-import { Text,TouchableOpacity } from 'react-native'
+import { Text,TouchableOpacity, View } from 'react-native'
 import { Feather, AntDesign } from '@expo/vector-icons'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/native'
@@ -13,7 +13,13 @@ export default function SaveContacts({data}){
         style={styles.buttonContact}
         onPress={ () => navigation.navigate('PaymentInfo')}
         >
-          <Text style={styles.txtButtonBanco}>{data.nome_banco}</Text>
+          <View style={styles.containerIconCliente}>
+            <Text style={styles.txtIniciaisCliente}>JW</Text>
+          </View>
+
+          <View style={styles.containerTxtNomeCliente}>
+            <Text style={styles.txtNomeCliente}>{data.nome}</Text>
+          </View>
         </TouchableOpacity>
     );
 }

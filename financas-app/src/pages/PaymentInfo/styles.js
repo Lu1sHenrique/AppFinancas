@@ -32,7 +32,7 @@ containerTitle: {
 containerInput:{
     width: '85%',
     borderBottomWidth: 1,
-    borderBottomColor: '#808080',
+    borderBottomColor: '#D9D9D9',
     borderRadius: 15,
     height: 50,
     marginStart: 15,
