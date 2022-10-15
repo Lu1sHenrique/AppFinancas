@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import {AntDesign, Foundation} from '@expo/vector-icons'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';    
+import {AntDesign, Foundation, Feather} from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 import styles from './styles'
 
@@ -36,6 +36,15 @@ const navigation = useNavigation();
                 <AntDesign name="user" size={26} color="#000"/>
             </View>
             <Text style={styles.labelButton}>Conta</Text>
+        </TouchableOpacity> 
+
+        <TouchableOpacity 
+        style={styles.actionButton}
+        > 
+            <View style={styles.areaButton}>
+                <Feather name="shopping-bag" size={35} color="#000"/>
+            </View>
+            <Text style={styles.labelButton}>Benefícios</Text>
         </TouchableOpacity> 
     </ScrollView>
   );

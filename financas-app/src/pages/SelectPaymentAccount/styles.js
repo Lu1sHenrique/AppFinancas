@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     },
 
     containerTitle: {
-      marginBottom: '7%', 
-      alignSelf: 'center'
+      marginTop: 70,
+      marginBottom: 60,
+      marginHorizontal: 30
   },
   
     title:{
-      fontSize: 28,
-      fontWeight: 'bold',
-      margin: 14
+      fontSize: 24,
+      fontWeight: 'bold'
   },
    
   containerHeader:{

@@ -18,45 +18,48 @@ buttonBack:{
 },
   
 containerTitle: { 
-    marginBottom: '7%'
+    marginTop: 70,
+      marginBottom: 60,
+      marginHorizontal: 15
 },
 
   title:{
-    fontSize: 35,
+    fontSize: 24,
     fontWeight: 'bold',
     margin: 15
 },
 
 containerInput:{
-    width: '90%',
-    borderWidth: 1,
+    width: '85%',
+    borderBottomWidth: 1,
+    borderBottomColor: '#808080',
     borderRadius: 15,
     height: 50,
     marginStart: 15,
     paddingHorizontal: 10,
     flexDirection: 'row',
+    alignSelf: 'center'
 },
 
 txtInputValue:{
     alignSelf: 'center',
-    fontSize: 25,
-    fontWeight: 'bold'
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#808080'
 },
 
 inputValue:{
     width: '97%',
-    fontSize: 25,
-    fontWeight: 'bold'
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#808080'
 },
 
 butonContinuar:{
-    width: '70%',
-    alignSelf: 'center',
-    height: 50,
-    borderWidth: 1,
-    borderRadius: 15,
-    justifyContent: 'space-around',
-    flexDirection: 'row'
+    alignSelf: 'flex-end',
+    borderRadius: 50,
+    marginEnd: 40,
+    backgroundColor: '#17B978'
 },
 
 txtButtonContinuar:{

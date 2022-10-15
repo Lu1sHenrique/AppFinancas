@@ -15,7 +15,7 @@ export default function AccountsConecPayment({data}){
         >
           <AntDesign style={styles.iconButtonbanco} name="bank" size={23}/>
           <Text style={styles.txtButtonBanco}>{data.nome_banco}</Text>
-          <Feather style={styles.iconButtonArrow} name="arrow-right" size={15} />
+          <Text style={styles.txtValue}><Text style={{color: '#808080', fontSize: 10}}>R$</Text> 500,00</Text>
         </TouchableOpacity>
     );
 }

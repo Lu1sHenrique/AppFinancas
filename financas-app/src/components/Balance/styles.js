@@ -7,18 +7,27 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
       paddingStart: 18,
       paddingEnd: 18,
-      marginTop: -24,
-      marginStart: 14,
-      marginEnd: 14,
-      borderRadius: 4,
+      marginTop: -50,
+      marginHorizontal: 40,
+      borderRadius: 15,
       paddingTop: 22,
       paddingBottom: 22,
-      zIndex: 99
+      zIndex: 99,
+      shadowColor: "#000",
+      shadowOffset: {
+	  width: 0,
+	  height: 7,
+      },
+      shadowOpacity: 0.41,
+      shadowRadius: 9.11,
+
+elevation: 14,
     },
 
     itemTitle:{
         fontSize: 20,
         color: '#bababa',
+        marginBottom: 8
     },
 
     content:{

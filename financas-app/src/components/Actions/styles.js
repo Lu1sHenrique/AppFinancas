@@ -3,15 +3,13 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       maxHeight: 110,
-      marginBottom: 14,
       marginTop: 18,
-      paddingEnd: 14,
-      paddingStart: 14
+      marginStart: 50,
     },
 
     actionButton:{
         alignItems: 'center',
-        marginRight: 32
+        marginRight: 20
     },
 
     areaButton:{

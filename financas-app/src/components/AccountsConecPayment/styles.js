@@ -12,12 +12,22 @@ const styles = StyleSheet.create({
         height: 60,
         alignItems: 'center',
         borderRadius: 15,
-        justifyContent: 'space-around'
+        justifyContent: 'space-between'
     },
 
     txtButtonBanco:{
-      fontSize: 15
+      fontSize: 15,
+      fontWeight: 'bold'
     },
+
+    iconButtonbanco:{
+      marginStart: 15
+    },
+
+    txtValue:{
+      marginEnd: 15,
+      color: 'green'
+    }
 })
 
 export default styles;

@@ -31,7 +31,7 @@ export default function PaymentInfo({data}){
             style={styles.inputValue}
             keyboardType='numeric'
             placeholder="0,00"
-            placeholderTextColor='#000'
+            placeholderTextColor='#808080'
             >
             </TextInput>
         </View>
@@ -41,10 +41,7 @@ export default function PaymentInfo({data}){
             style={styles.butonContinuar}
             onPress={() => navigation.navigate('SelectKeyPayment')}
             >
-                <Text style={styles.txtButtonContinuar}>
-                    Continuar
-                </Text>
-                <Feather style={styles.iconButtonContinuar} name="arrow-right" size={20}/>
+                <Ionicons name="chevron-forward" size={65} color='#fff'/>
             </TouchableOpacity>
         </View>
     </View>

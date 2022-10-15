@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React from "react";
 import { View, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import {MotiView, MotiText} from 'moti'
