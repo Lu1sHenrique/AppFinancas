@@ -6,6 +6,7 @@ import Profile from '../pages/Profile/index'
 import SelectPaymentAccount from '../pages/SelectPaymentAccount';
 import PaymentInfo from '../pages/PaymentInfo';
 import SelectKeyPayment from '../pages/SelectKeyPayment';
+import RoutesBottom from '../routes/RoutesBottom'
 
 const Stack = createNativeStackNavigator();
 export default function Routes(){
@@ -17,8 +18,8 @@ export default function Routes(){
     >
 
     <Stack.Screen 
-      name="Home"
-      component={Home}
+      name="RoutesBottom"
+      component={RoutesBottom}
       options={{
         headerShown:false
         }}
