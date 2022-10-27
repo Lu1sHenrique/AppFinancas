@@ -1,39 +1,33 @@
 import React from 'react';
-import {
-  TouchableOpacity
-} from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { FontAwesome, Ionicons, Fontisto } from '@expo/vector-icons'
+import { FontAwesome, Ionicons, Entypo, Octicons } from '@expo/vector-icons'
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile'
+import SelectPaymentAccount from '../pages/SelectPaymentAccount'
+import AddBanks from '../pages/AddBanks';
 const Bottom = createBottomTabNavigator();
 
 export default function RoutesFrota(){
 
   return (
-      <Bottom.Navigator
+    <Bottom.Navigator
       screenOptions={{
         headerShown: false,
         tabBarHideOnKeyboard: true,
         tabBarStyle:{
           borderTopColor: 'transparent',
           right: 10,
-          backgroundColor: "#d21e2b",
-          borderWidth: 1,
-          borderTopLeftRadius: 60,
-          borderTopRightRadius: 60,
-          height: 80,
+          backgroundColor: "#fff",
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          height: 70,
           paddingTop: 10
         },
-        tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: '#000',
-        tabBarLabelStyle:{
-          fontSize: 18,
-          fontFamily: 'BebasNeue-Regular',
-          paddingBottom: 10
-        }
+        tabBarActiveTintColor: '#17B978',
+        tabBarInactiveTintColor: '#fff',
+        tabBarShowLabel:false
       }}
       >
       <Bottom.Screen 
@@ -41,12 +35,12 @@ export default function RoutesFrota(){
         component={Home}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="home" color="#dadada" size={30} />
+              <Ionicons name="home" color="#dadada" size={30} />
             ),
             tabBarAccessibilityLabel:"Home",
-          }}
+        }}
         />
-
+        
       <Bottom.Screen 
         name="Profile"
         component={Profile}
@@ -56,48 +50,31 @@ export default function RoutesFrota(){
             ),
             tabBarAccessibilityLabel:"Profile",
           }}
-        />
+      /> 
 
-        <Bottom.Screen 
-        name="Consultar"
-        component={RelFrota}
+      <Bottom.Screen 
+        name="SelectPaymentAccount"
+        component={SelectPaymentAccount}
         options={{
-          tabBarIcon: ({ color }) => (
-          <IconAntDesign name="search1" color={color} size={30} />
-          ),
-          tabBarAccessibilityLabel:"Relatório Frota",
-          
-        }}
-        />
-
-        <Bottom.Screen 
-        name="Dashboard"
-        component={RelDash}
-        options={{
-          tabBarIcon: ({ color }) => (
-          <Icon name="pie-chart" color={color} size={30} />
-          ),
-          tabBarAccessibilityLabel:"Relatório Frota",
-          
-        }}
-        />
-
-        <Bottom.Screen 
-        name="Inventário"
-        component={InvFrota}
-        options={{
-          tabBarIcon: ({ color }) => (
-          <Icon name="clipboard" color={color} size={30} />
-          ),
-          tabBarAccessibilityLabel:"Inventário Frota",
-          tabBarButton: props => (
-            <TouchableOpacity {...props} onPress={(showAlert)} />
-          )
+          tabBarIcon: () => (
+            <Octicons name="arrow-switch" color="#dadada" size={30} />
+            ),
+            tabBarAccessibilityLabel:"SelectPaymentAccount",
           }}
-        />    
-      </Bottom.Navigator>
+      />
+
+      <Bottom.Screen 
+        name="AddBanks"
+        component={AddBanks}
+        options={{
+          tabBarIcon: () => (
+            <Entypo name="plus" color="#dadada" size={40} />
+            ),
+            tabBarAccessibilityLabel:"AddBanks",
+          }}
+      />     
+    </Bottom.Navigator>
   )
 };
-
 
 
