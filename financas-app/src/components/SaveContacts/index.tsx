@@ -19,7 +19,7 @@ export default function SaveContacts({ data }) {
       </View>
 
       <View style={styles.containerTxtNomeCliente}>
-        <Text style={styles.txtNomeCliente}>{data.nome}</Text>
+        <Text style={styles.txtNomeCliente}>{data}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
   value: {
     color: colors.green
   },
+  search: {
+    marginTop: 5,
+  },
 
   lineInputIcon: {
     flexDirection: 'row',
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginStart: 20,
     fontSize: 15,
-    color: colors.black
+    color: colors.gray
   },
 
 });
