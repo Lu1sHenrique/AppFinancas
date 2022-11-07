@@ -23,7 +23,7 @@ export function InputText({ textPlaceholder, ...rest }: InputTextProps) {
                     
                 <Feather
                     style={{ marginEnd: 20 }}
-                    name='arrow-down' size={25} color="#17B978" />
+                    name='chevron-down' size={25} color="#17B978" />
             </TouchableOpacity>
         </View>
 
