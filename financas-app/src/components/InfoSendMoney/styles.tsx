@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         width: '100%',
-        padding: 25
+        padding: 25,
+        top: -15
     },
     date: {
         color: colors.grayBlack,

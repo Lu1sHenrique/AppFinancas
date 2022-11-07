@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end',
         borderRadius: 50,
         marginEnd: 40,
-        backgroundColor: colors.green
+        backgroundColor: colors.green,
+        top: 20
     },
 
     txtButtonContinuar: {

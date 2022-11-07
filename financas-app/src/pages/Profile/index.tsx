@@ -37,7 +37,7 @@ export default function Profile() {
               return (
                   <AccountsConec
                     bank={itemData.item}
-                    handleRigth={() => Alert('Banco excluido!')} />
+                    handleRigth={() => {Alert.alert('Banco excluido!')}} />
               )
             }} />
         </>

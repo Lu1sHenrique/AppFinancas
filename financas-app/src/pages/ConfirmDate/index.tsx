@@ -103,7 +103,7 @@ export default function ConfirmDate() {
             <Button
                 disabled
                 variant='outline'
-                style={{ marginLeft: 20, marginBottom: 30 }}
+                style={{ marginLeft: 20, marginBottom: 40 }}
                 onPress={handleSendMoney}
                 title='Tranferir'
             />

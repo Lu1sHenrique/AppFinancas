@@ -1,6 +1,6 @@
 import React from "react";
-import { Feather } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Text, View, TouchableOpacity, Animated } from 'react-native';
 
@@ -15,13 +15,17 @@ export default function AccountsConec({ bank, handleRigth }) {
   function RightActions({ progress, dragX, onPress }) {
 
     const scale = dragX.interpolate({
-      inputRange: [-100, 0],
+      inputRange: [-80, 0],
       outputRange: [1, 0],
       extrapolate: 'clamp'
     })
     return (
       <TouchableOpacity onPress={onPress}>
         <View style={styles.deleteBox}>
+          <Ionicons
+            name="trash"
+            size={30}
+            color='#FFF' />
           <Animated.Text
             style={[styles.action, { transform: [{ scale }] }]}>
             Remover
