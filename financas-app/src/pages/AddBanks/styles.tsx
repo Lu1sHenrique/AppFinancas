@@ -1,33 +1,45 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+import colors from '../../styles/colors';
 
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fafafa'
-    },
-
-    containerTitle: {
-      marginTop: 70,
-      marginBottom: 60,
-      marginHorizontal: 30
-  },
-  
-    title:{
-      fontSize: 24,
-      fontWeight: 'bold'
-  },
-   
-  containerHeader:{
-    width: '80%',
-    marginTop: '12%'
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
   },
 
-  buttonBack:{
-    marginStart: 15,
-    width: 40
+  containerTitle: {
+    marginTop: 10,
+    marginBottom: 2,
+    marginHorizontal: 30,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    alignItems: 'center'
   },
 
-  });
+  title: {
+    fontSize: 24,
+    fontWeight: '500',
+  },
+
+  value: {
+    color: colors.green,
+    fontSize: 24,
+    fontWeight: '500',
+  },
+
+  checkbox: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 12,
+    marginLeft: 10,
+    marginTop: 10
+  },
+
+  text: {
+    marginRight: 170
+  },
+
+});
 
 export default styles;

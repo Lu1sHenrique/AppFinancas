@@ -1,31 +1,7 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
 
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.white
-  },
-
-  containerTitle: {
-    marginTop: 50,
-    marginBottom: 30,
-    marginHorizontal: 15
-  },
-
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    margin: 15
-  },
-  
-  value: {
-    color: colors.green
-  },
-  search: {
-    marginTop: 5,
-  },
 
   lineInputIcon: {
     flexDirection: 'row',
@@ -35,7 +11,7 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.gray,
     height: 50,
     borderRadius: 10,
-    width: '80%',
+    width: '90%',
     alignSelf: 'center'
   },
 
@@ -46,6 +22,6 @@ const styles = StyleSheet.create({
     color: colors.gray
   },
 
-});
+  });
 
 export default styles;

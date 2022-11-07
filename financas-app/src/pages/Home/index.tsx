@@ -64,43 +64,38 @@ const list = [
 
 export default function Home() {
     return (
-        <FlatList
-            style={styles.container}
-            ListHeaderComponent ={
-                <>
-                    <Header name="Luis Henrique" />
+        <View style={styles.container}>
 
-                    <Balance saldo="9.250,90" gastos="-527,00" />
+            <Header name="Luis Henrique" />
 
-                    <Actions />
+            <Balance saldo="9.250,90" gastos="-527,00" />
 
-                    <View
-                        style={{ flex: 1 }}>
-                        <View style={{ marginVertical: 20 }}>
-                            <View style={styles.lineInputIcon}>
-                                <TextInput
-                                    placeholder='Buscar'
-                                    placeholderTextColor={"#808080"}
-                                    style={styles.input}
-                                >
-                                </TextInput>
-                                <Feather style={{ marginEnd: 20 }} name='search' size={25} color="#808080" />
-                            </View>
-                        </View>
+            <Actions />
 
-                        <Text style={styles.title}>Últimas movimentações</Text>
-
-                        <FlatList
-                            style={styles.list}
-                            data={list}
-                            keyExtractor={(item) => String(item.id)}
-                            showsVerticalScrollIndicator={false}
-                            renderItem={({ item }) => <Movements data={item} />}
-                        />
+            <View
+                style={{ flex: 1 }}>
+                <View style={{ marginVertical: 20 }}>
+                    <View style={styles.lineInputIcon}>
+                        <TextInput
+                            placeholder='Buscar'
+                            placeholderTextColor={"#808080"}
+                            style={styles.input}>
+                        </TextInput>
+                        <Feather style={{ marginEnd: 20 }} name='search' size={25} color="#808080" />
                     </View>
-                </>
-            }
+                </View>
 
-        />
+                <Text style={styles.title}>Últimas movimentações</Text>
+
+                <FlatList
+                    style={styles.list}
+                    data={list}
+                    keyExtractor={(item) => String(item.id)}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={({ item }) => <Movements data={item} />}
+                />
+            </View>
+        </View>
+
     );
 }
