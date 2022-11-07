@@ -13,11 +13,6 @@ const styles = StyleSheet.create({
         marginTop: '12%'
     },
 
-    buttonBack: {
-        marginStart: 15,
-        width: 40
-    },
-
     containerTitle: {
         marginTop: 70,
         marginBottom: 60,

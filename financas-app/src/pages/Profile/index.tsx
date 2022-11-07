@@ -21,7 +21,9 @@ export default function Profile() {
           <Header name="Luis Henrique" />
 
           <View style={styles.containerTxtAccountsConec}>
-            <Text style={styles.txtAccountsConec}>Contas Conectadas</Text>
+            <Text style={styles.txtAccountsConec}>
+              Contas Conectadas
+            </Text>
           </View>
 
           <FlatList
@@ -35,9 +37,9 @@ export default function Profile() {
             data={DATA}
             renderItem={(itemData) => {
               return (
-                  <AccountsConec
-                    bank={itemData.item}
-                    handleRigth={() => {Alert.alert('Banco excluido!')}} />
+                <AccountsConec
+                  bank={itemData.item}
+                  handleRigth={() => { Alert.alert('Banco excluido!') }} />
               )
             }} />
         </>

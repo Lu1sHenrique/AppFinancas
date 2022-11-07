@@ -6,7 +6,7 @@ import styles from './styles';
 
 interface ButtonProps {
     title: string;
-    description: string;
+    description: string | number;
     onPress?: () => void;// opcional até criação da tela
 }
 

@@ -1,8 +1,6 @@
 import {StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
 
-
-
 const styles = StyleSheet.create({
     container: {
       backgroundColor: colors.white
@@ -18,7 +16,7 @@ const styles = StyleSheet.create({
       marginTop: 20,
       marginBottom: 20,
       fontWeight: '500',
-      color: colors.greenDark,
+      color: colors.black,
     },
 
     buttonBanco:{

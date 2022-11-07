@@ -1,37 +1,34 @@
 import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Modal } from 'react-native';
+import { Calendar } from 'react-native-calendars';
 
 import styles from './styles';
 import { Button } from '../../components/Button';
 import { InfoSendMoney } from '../../components/InfoSendMoney';
+import ButtonBack from '../../components/Utils/buttonBack';
+import { AvatarBank } from '../../components/AvatarBank';
 
 export default function ConfirmDate() {
 
     const navigation = useNavigation();
     const [loading, setLoading] = useState(false);
+    const [calendar, setShowCalendar] = useState(false);
 
     function handleSendMoney() {
         setLoading(true);
         setTimeout(() => {
-            setLoading(false);
-        }, 2000);
+          setLoading(false);
+        }, 5000);
         console.log('funfo');
+        //navigation.navigate('');
     }
 
     return (
         <View style={styles.container}>
 
-            <View style={styles.containerHeader}>
-                <View style={styles.buttonBack}>
-                    <TouchableOpacity
-                        onPress={() => navigation.goBack()}
-                    >
-                        <Ionicons name="chevron-back" size={30} />
-                    </TouchableOpacity>
-                </View>
-            </View>
+            <ButtonBack />
 
             <View style={styles.containerTitle}>
                 <Text style={styles.title}>
@@ -42,44 +39,7 @@ export default function ConfirmDate() {
                 </Text>
             </View>
 
-            <View style={styles.avatar}>
-                <View style={styles.IconAvatar}>
-                    <Text style={styles.txtIniciaisCliente}>
-                        JC
-                    </Text>
-                </View>
-
-                <View style={styles.dateBank}>
-
-                    <Text style={styles.txtNomeCliente}>
-                        Jane Cooper
-                    </Text>
-                    <View style={styles.bank1}>
-                        <Text style={styles.bank}>
-                            Banco:
-                        </Text>
-                        <Text style={styles.txtNomeCliente}>
-                            323
-                        </Text>
-                    </View>
-                    <View style={styles.bank1}>
-                        <Text style={styles.bank}>
-                            Agência:
-                        </Text>
-                        <Text style={styles.txtNomeCliente}>
-                            0001
-                        </Text>
-                    </View>
-                    <View style={styles.bank1}>
-                        <Text style={styles.bank}>
-                            Conta corrente:
-                        </Text>
-                        <Text style={styles.txtNomeCliente}>
-                            398322-9
-                        </Text>
-                    </View>
-                </View>
-            </View>
+            <AvatarBank />
 
             <TouchableOpacity style={styles.editVal}>
                 <Text style={styles.valor}>
@@ -93,19 +53,42 @@ export default function ConfirmDate() {
 
             <InfoSendMoney
                 title='Data de transferência'
-                description='Hoje'
+                description='setShowCalendar'
+                onPress={() => setShowCalendar(true)}
             />
             <InfoSendMoney
                 title='Tipo de transferência'
                 description='Pix'
             />
 
+            <Modal
+                visible={calendar}
+                animationType='fade'
+            >
+
+                <Text style={styles.calendarTitle}>
+                    Para qual dia será transferido?
+                </Text>
+                <Calendar
+                    style={styles.calendar}
+                    onDayPress={date => {
+                        console.log(date)
+                        setShowCalendar(false)
+                    }}
+                    firstDay={1}
+                    hideArrows={false}
+                    hideExtraDays={true}
+                    maxDate={'2025-12-30'}
+                    enableSwipeMonths={true}
+                />
+            </Modal>
+
             <Button
-                disabled
+                disabled={loading}
                 variant='outline'
-                style={{ marginLeft: 20, marginBottom: 40 }}
-                onPress={handleSendMoney}
                 title='Tranferir'
+                onPress={handleSendMoney}
+                style={{ marginLeft: 20, marginBottom: 40 }}
             />
 
         </View>
