@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, TouchableOpacity, View, TextInput } from 'react-native'
-import { Feather, Ionicons } from '@expo/vector-icons'
-import styles from './styles'
-import { useNavigation } from '@react-navigation/native'
-import colors from "../../styles/colors";
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { Text, TouchableOpacity, View, TextInput } from 'react-native';
 
-export default function PaymentInfo({ data }) {
+import styles from './styles';
+
+
+export default function PaymentInfo({ }) {
 
 
     const navigation = useNavigation();
@@ -15,8 +16,7 @@ export default function PaymentInfo({ data }) {
             <View style={styles.containerHeader}>
                 <View style={styles.buttonBack}>
                     <TouchableOpacity
-                        onPress={() => navigation.goBack()}
-                    >
+                        onPress={() => navigation.goBack()}>
                         <Ionicons name="chevron-back" size={30} />
                     </TouchableOpacity>
                 </View>

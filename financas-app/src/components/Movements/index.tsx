@@ -6,7 +6,7 @@ import styles from './styles';
 
 export default function Movements({data}) {
 
-  const [showValue, setShowValue] = useState(false)
+  const [showValue, setShowValue] = useState(false);
 
  return (
    <TouchableOpacity style={styles.container} onPress={() => setShowValue(!showValue)}>

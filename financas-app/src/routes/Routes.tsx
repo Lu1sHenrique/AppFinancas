@@ -8,6 +8,7 @@ import Profile from '../pages/Profile/index';
 import PaymentInfo from '../pages/PaymentInfo';
 import SelectPaymentAccount from '../pages/SelectPaymentAccount';
 import SelectKeyPayment from '../pages/SelectKeyPayment';
+import ConfirmDate from '../pages/ConfirmDate';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,11 @@ const Routes: React.FC = () => (
     <Stack.Screen
       name="SelectKeyPayment"
       component={SelectKeyPayment}
+    />
+
+    <Stack.Screen
+      name="ConfirmDate"
+      component={ConfirmDate}
     />
   </Stack.Navigator>
 )

@@ -12,14 +12,14 @@ export default function SaveContacts({ data }) {
   return (
     <TouchableOpacity
       style={styles.buttonContact}
-      onPress={() => navigation.navigate('PaymentInfo')}
+      onPress={() => navigation.navigate('ConfirmDate')}
     >
       <View style={styles.containerIconCliente}>
         <Text style={styles.txtIniciaisCliente}>JW</Text>
       </View>
 
       <View style={styles.containerTxtNomeCliente}>
-        <Text style={styles.txtNomeCliente}>{data.nome}</Text>
+        <Text style={styles.txtNomeCliente}>{data}</Text>
       </View>
     </TouchableOpacity>
   );

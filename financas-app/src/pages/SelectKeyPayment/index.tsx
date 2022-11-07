@@ -1,106 +1,60 @@
+import React, { useRef, useState } from 'react';
 import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
 import { Text, View, FlatList, TextInput } from 'react-native';
 
 import styles from './styles';
 import SaveContacts from '../../components/SaveContacts';
 import ButtonBack from '../../components/Utils/buttonBack';
+import MOCK_DATA from '../../../MOCK_DATA.json';
 
-const listBancos = [
-    {
-        id: 1,
-        nome: "Luis Henrique de Freitas Teixeira",
-        cpf: "03239924200",
-        telefone: "91988571688",
-        email: "lhenrique.lh000@gmail.com"
-    },
-    {
-        id: 2,
-        nome: "Nicole Aparecida Letícia Fernandes",
-        cpf: "86872295775",
-        telefone: "917928395217",
-        email: "nicole.aparecida.fernandes@andrediaz.com"
-    },
-    {
-        id: 3,
-        nome: "César Nathan da Costa",
-        cpf: "17908243037",
-        telefone: "63984544574",
-        email: "cesar-dacosta92@ppconsulting.com.br"
-    },
-    {
-        id: 4,
-        nome: "Guilherme Lucca Breno da Rocha",
-        cpf: "08243155880",
-        telefone: "83993220813",
-        email: "guilherme.lucca.darocha@ocaconsultoria.com"
-    },
-    {
-        id: 5,
-        nome: "Lívia Sônia Rodrigues",
-        cpf: "07671875716",
-        telefone: "69997647488",
-        email: "liviasoniarodrigues@aichele.com.br"
-    },
-    {
-        id: 6,
-        nome: "Guilherme Lucca Breno da Rocha",
-        cpf: "08243155880",
-        telefone: "83993220813",
-        email: "guilherme.lucca.darocha@ocaconsultoria.com"
-    },
-    {
-        id: 7,
-        nome: "Lívia Sônia Rodrigues",
-        cpf: "07671875716",
-        telefone: "69997647488",
-        email: "liviasoniarodrigues@aichele.com.br"
-    }
-]
 
 export default function SelectKeyPayment() {
 
-    const navigation = useNavigation();
+    const [searchWord, setSearchWord] = useState('');
 
     return (
-        <FlatList
-            style={styles.container}
-            ListHeaderComponent={
-                <>
-                    <ButtonBack />
+        <View style={styles.container}>
 
-                    <View style={styles.containerTitle}>
-                        <Text style={styles.title}>
-                            Para quem você quer transferir
-                            <Text style={styles.value}>
-                                R$ 50,00
-                            </Text>
-                            ?
-                        </Text>
-                    </View>
+            <ButtonBack />
 
-                    <View style={{ marginTop: 30, marginBottom: 40 }}>
-                        <View style={styles.lineInputIcon}>
-                            <TextInput
-                                placeholder='Procura por quem?'
-                                placeholderTextColor={"#808080"}
-                                style={styles.input}>
-                            </TextInput>
-                            <Feather
-                                style={{ marginEnd: 20 }}
-                                name='search' size={25} color="#808080" />
-                        </View>
-                    </View>
+            <View style={styles.containerTitle}>
+                <Text style={styles.title}>
+                    Para quem você quer transferir
+                    <Text style={styles.value}>
+                        R$ 50,00
+                    </Text>
+                    ?
+                </Text>
+            </View>
 
-                    <FlatList
-                        data={listBancos}
-                        keyExtractor={(item) => String(item.id)}
-                        renderItem={({ item }) =>
-                            <SaveContacts
-                                data={item} />}
-                    />
-                </>
-            }
-        />
+            <View style={styles.search}>
+                <View style={styles.lineInputIcon}>
+                    <TextInput
+                        placeholder='Insira os dados..'
+                        style={styles.input}
+                        onChangeText={setSearchWord}>
+                    </TextInput>
+                    <Feather
+                        style={{ marginEnd: 20 }}
+                        name='search' size={25} color="#808080" />
+                </View>
+            </View>
+
+            <FlatList
+                data={MOCK_DATA.filter(val => {
+                    if (searchWord === '') {
+                        return val
+                    } else if (val.first_name.toLocaleLowerCase()
+                        .includes(searchWord.toLocaleLowerCase())) {
+                        return val
+                    }
+                }).map((item, index) =>
+                    <Text key={index}>{item.first_name}</Text>
+                )}
+                renderItem={(itemData) =>
+                    <SaveContacts
+                        data={itemData.item} />
+                } />
+        </View>
     );
 }
