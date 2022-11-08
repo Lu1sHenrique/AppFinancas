@@ -1,16 +1,11 @@
 import { StyleSheet } from 'react-native';
 import colors from '../../styles/colors';
 
-
 const styles = StyleSheet.create({
+    
     container: {
         flex: 1,
         backgroundColor: colors.white
-    },
-
-    containerHeader: {
-        width: '80%',
-        marginTop: '12%'
     },
 
     containerTitle: {
@@ -34,7 +29,8 @@ const styles = StyleSheet.create({
         marginStart: 15,
         paddingHorizontal: 10,
         flexDirection: 'row',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginBottom: 50
     },
 
     txtInputValue: {
@@ -50,23 +46,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: colors.gray
     },
-
-    butonContinuar: {
-        alignSelf: 'flex-end',
-        borderRadius: 50,
-        marginEnd: 40,
-        backgroundColor: colors.green,
-        top: 20
-    },
-
-    txtButtonContinuar: {
-        fontSize: 20,
-        alignSelf: 'center'
-    },
-
-    iconButtonContinuar: {
-        alignSelf: 'center'
-    }
-});
+})
 
 export default styles;

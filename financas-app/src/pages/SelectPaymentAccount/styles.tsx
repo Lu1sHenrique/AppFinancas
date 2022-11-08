@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
 
     containerTitle: {
       marginTop: 70,
-      marginBottom: 60,
-      marginHorizontal: 30
+      marginBottom: 30,
+      marginHorizontal: 20
   },
   
     title:{

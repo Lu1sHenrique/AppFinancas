@@ -3,12 +3,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import RoutesBottom from './RoutesBottom';
 
-import Home from '../pages/Home/index';
 import Profile from '../pages/Profile/index';
 import PaymentInfo from '../pages/PaymentInfo';
 import SelectPaymentAccount from '../pages/SelectPaymentAccount';
 import SelectKeyPayment from '../pages/SelectKeyPayment';
 import ConfirmDate from '../pages/ConfirmDate';
+import AlterValSend from '../pages/AlterValSend';
+import Proving from '../pages/Proving';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,16 @@ const Routes: React.FC = () => (
     <Stack.Screen
       name="ConfirmDate"
       component={ConfirmDate}
+    />
+
+    <Stack.Screen
+      name='AlterValSend'
+      component={AlterValSend}
+    />
+
+    <Stack.Screen 
+      name='Proving'
+      component={Proving}
     />
   </Stack.Navigator>
 )
