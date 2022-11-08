@@ -22,7 +22,7 @@ export default function ConfirmDate() {
           setLoading(false);
         }, 5000);
         console.log('funfo');
-        //navigation.navigate('');
+        navigation.navigate('Proving');
     }
 
     return (
@@ -41,7 +41,10 @@ export default function ConfirmDate() {
 
             <AvatarBank />
 
-            <TouchableOpacity style={styles.editVal}>
+            <TouchableOpacity 
+                style={styles.editVal}
+                onPress={() => navigation.navigate('AlterValSend') }
+                >
                 <Text style={styles.valor}>
                     R$50,00
                 </Text>
