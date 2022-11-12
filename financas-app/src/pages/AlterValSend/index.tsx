@@ -22,7 +22,8 @@ export default function AlterValSend() {
     }
     return (
         <>
-            <ButtonBack />
+            <ButtonBack
+            iconName='chevron-back' />
 
             <View style={styles.containerTitle}>
                 <Text style={styles.title}>

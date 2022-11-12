@@ -39,7 +39,22 @@ const styles = StyleSheet.create({
 
   action: {
     color: colors.white
-  }
+  },
+
+  nameBank:{
+    fontSize: 36,
+    marginTop: 20,
+    marginBottom: '20%',
+    fontWeight: 'bold',
+    marginHorizontal: 30,
+    alignSelf: 'center',
+    color: colors.blueBlack,
+  },
+
+  close: {
+    marginLeft: '80%',
+    marginTop: '20%'
+  }, 
 
 })
 

@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Text, View, TouchableOpacity, Animated } from 'react-native';
-
 import Swipeable from 'react-native-gesture-handler/Swipeable';
+import { Text, View, TouchableOpacity, Animated, Modal } from 'react-native';
 
 import styles from './styles';
+import { Button } from '../Button';
+import DataBank from '../DataBank';
+import ButtonBack from '../Utils/buttonBack';
 
 export default function AccountsConec({ bank, handleRigth }) {
 
   const navigation = useNavigation();
+  const [ediBank, setShowEdiBank] = useState(false);
 
   function RightActions({ progress, dragX, onPress }) {
 
@@ -20,10 +23,11 @@ export default function AccountsConec({ bank, handleRigth }) {
       extrapolate: 'clamp'
     })
     return (
+       // Função arrasta p/lado
       <TouchableOpacity onPress={onPress}>
         <View style={styles.deleteBox}>
           <Ionicons
-            name="trash"
+            name='trash'
             size={30}
             color='#FFF' />
           <Animated.Text
@@ -45,11 +49,11 @@ export default function AccountsConec({ bank, handleRigth }) {
     >
       <TouchableOpacity
         style={styles.buttonBanco}
-        onPress={() => navigation.navigate('AddBanks')}
+        onPress={() => setShowEdiBank(true)}
       >
         <FontAwesome
           size={23}
-          name="bank"
+          name='bank'
           style={styles.iconButtonbanco} />
 
         <Text style={styles.txtButtonBanco}>
@@ -57,10 +61,40 @@ export default function AccountsConec({ bank, handleRigth }) {
         </Text>
 
         <Feather
-          size={15}
-          name="arrow-right"
+          size={25}
+          name='chevron-right'
           style={{ right: 25 }} />
       </TouchableOpacity>
+
+      <Modal
+        visible={ediBank}
+        animationType='fade'
+        statusBarTranslucent={true}>
+
+          <ButtonBack
+          style={styles.close} 
+          iconName='close'/>
+
+        <Text style={styles.nameBank}>
+          {bank}
+        </Text>
+
+        <DataBank/>
+
+        <Button
+          variant='primary'
+          title='Editar'
+          onPress={() => navigation.navigate('AddBanks')}
+          style={{ marginLeft: 20, marginBottom: 40 }} />
+
+        <Button
+          disabled={false}
+          variant='outline'
+          title='Compartilhar pix'
+          onPress={() =>{}}
+          style={{ marginLeft: 20, marginBottom: 40 }} />
+      </Modal>
+
     </Swipeable>
   );
 }
