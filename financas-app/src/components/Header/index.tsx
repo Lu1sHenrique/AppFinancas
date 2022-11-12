@@ -5,16 +5,25 @@ import { useNavigation } from '@react-navigation/native';
 import { View, TouchableOpacity, ImageBackground } from 'react-native';
 
 import styles from "./styles";
-
 import imagemFundo from '../../assets/bg.png';
 
-export default function Header({ name }) {
+interface HeaderProps {
+    title?: string;
+    name: string;
+}
+
+export default function Header({ name, title }: HeaderProps) {
 
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <ImageBackground  source={imagemFundo} resizeMode='cover'  style ={styles.image} />
+
+            <ImageBackground
+                source={imagemFundo}
+                resizeMode='cover'
+                style={styles.image} />
+
             <MotiView
                 style={styles.content}
                 from={{
@@ -43,15 +52,32 @@ export default function Header({ name }) {
                         type: 'timing',
                         duration: 800,
                         delay: 800
+                    }}>
+                    {name}
+                </MotiText>
+                
+                <MotiText
+                    style={styles.userKey}
+                    from={{
+                        translateX: -300,
                     }}
-                >{name}</MotiText>
+                    animate={{
+                        translateX: 0
+                    }}
+                    transition={{
+                        type: 'timing',
+                        duration: 800,
+                        delay: 800
+                    }}>
+                    {title}
+                </MotiText>
 
                 <TouchableOpacity
                     activeOpacity={0.9}
                     style={styles.buttonUser}
-                    onPress={ () => navigation.navigate('Profile')}
+                    onPress={() => navigation.navigate('Profile')}
                 >
-                    <Feather name="user" size={27} color="#fff" />
+                    <Feather name="user" size={30} color="#fff" />
                 </TouchableOpacity>
             </MotiView>
         </View>

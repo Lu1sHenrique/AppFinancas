@@ -10,6 +10,7 @@ import SelectKeyPayment from '../pages/SelectKeyPayment';
 import ConfirmDate from '../pages/ConfirmDate';
 import AlterValSend from '../pages/AlterValSend';
 import Proving from '../pages/Proving';
+import AlterBanks from '../pages/AlterBanks';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,32 +22,32 @@ const Routes: React.FC = () => (
   >
 
     <Stack.Screen
-      name="RoutesBottom"
+      name='RoutesBottom'
       component={RoutesBottom}
     />
 
     <Stack.Screen
-      name="Profile"
+      name='Profile'
       component={Profile}
     />
 
     <Stack.Screen
-      name="SelectPaymentAccount"
+      name='SelectPaymentAccount'
       component={SelectPaymentAccount}
     />
 
     <Stack.Screen
-      name="PaymentInfo"
+      name='PaymentInfo'
       component={PaymentInfo}
     />
 
     <Stack.Screen
-      name="SelectKeyPayment"
+      name='SelectKeyPayment'
       component={SelectKeyPayment}
     />
 
     <Stack.Screen
-      name="ConfirmDate"
+      name='ConfirmDate'
       component={ConfirmDate}
     />
 
@@ -59,6 +60,12 @@ const Routes: React.FC = () => (
       name='Proving'
       component={Proving}
     />
+
+    <Stack.Screen 
+      name='AlterBanks'
+      component={AlterBanks}
+    />
+
   </Stack.Navigator>
 )
 

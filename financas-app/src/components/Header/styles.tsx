@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginVertical: 35
+        justifyContent: 'space-around',
+        marginVertical: 30
     },
     userName:{
         fontSize: 22,
@@ -23,6 +23,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 25
     },
+
+    userKey: {
+        fontSize: 22,
+        color: colors.blueBlack,
+        fontWeight: 'bold',
+        justifyContent: 'center',
+        top: 50,
+        right: 100
+    },
+
     buttonUser:{
         width: 44,
         height: 44,

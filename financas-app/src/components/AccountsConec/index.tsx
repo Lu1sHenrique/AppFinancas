@@ -84,7 +84,7 @@ export default function AccountsConec({ bank, handleRigth }) {
         <Button
           variant='primary'
           title='Editar'
-          onPress={() => navigation.navigate('AddBanks')}
+          onPress={() => navigation.navigate('AlterBanks')}
           style={{ marginLeft: 20, marginBottom: 40 }} />
 
         <Button
