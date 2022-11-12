@@ -37,9 +37,9 @@ export default function PaymentInfo({ }) {
                 <TouchableOpacity
                     style={styles.butonContinuar}
                     onPress={() => navigation.navigate('SelectKeyPayment')}>
-                    <Ionicons 
-                        size={65} 
-                        name="chevron-forward" 
+                    <Ionicons
+                        size={65}
+                        name="chevron-forward"
                         color='#fff' />
                 </TouchableOpacity>
             </View>

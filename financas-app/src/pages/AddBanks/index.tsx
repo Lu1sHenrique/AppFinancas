@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Text, View, ScrollView } from 'react-native';
 
 import styles from './styles';
@@ -9,6 +10,7 @@ import { Button } from '../../components/Button';
 
 export default function AddBanks() {
 
+  const navigation = useNavigation();
   const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -18,6 +20,7 @@ export default function AddBanks() {
       setLoading(false);
     }, 2000);
     console.log('funfo');
+    navigation.navigate('StatusSend');
   }
 
   return (

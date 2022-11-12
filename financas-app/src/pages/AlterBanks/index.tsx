@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Text, View, ScrollView } from 'react-native';
 
 import styles from './styles';
@@ -9,6 +10,7 @@ import { Button } from '../../components/Button';
 
 export default function AddBanks() {
 
+  const navigation = useNavigation();
   const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -18,12 +20,13 @@ export default function AddBanks() {
       setLoading(false);
     }, 2000);
     console.log('funfo');
+    navigation.navigate('StatusSend');
   }
 
   return (
     <View style={styles.container}>
 
-      <Header 
+      <Header
         name='Luiz Henrique'
         title='Chave Pix:000.000.000.88' />
 
@@ -42,7 +45,7 @@ export default function AddBanks() {
         <InputText
           textPlaceholder={'Número da conta'} />
         <InputText
-          onPress={()=> {}}
+          onPress={() => { }}
           iconName='chevron-down'
           textPlaceholder={'Tipo da conta'}
         />

@@ -23,7 +23,7 @@ export default function AccountsConec({ bank, handleRigth }) {
       extrapolate: 'clamp'
     })
     return (
-       // Função arrasta p/lado
+      // Função arrasta p/lado
       <TouchableOpacity onPress={onPress}>
         <View style={styles.deleteBox}>
           <Ionicons
@@ -71,15 +71,15 @@ export default function AccountsConec({ bank, handleRigth }) {
         animationType='fade'
         statusBarTranslucent={true}>
 
-          <ButtonBack
-          style={styles.close} 
-          iconName='close'/>
+        <ButtonBack
+          style={styles.close}
+          iconName='close' />
 
         <Text style={styles.nameBank}>
           {bank}
         </Text>
 
-        <DataBank/>
+        <DataBank />
 
         <Button
           variant='primary'
@@ -91,7 +91,7 @@ export default function AccountsConec({ bank, handleRigth }) {
           disabled={false}
           variant='outline'
           title='Compartilhar pix'
-          onPress={() =>{}}
+          onPress={() => { }}
           style={{ marginLeft: 20, marginBottom: 40 }} />
       </Modal>
 

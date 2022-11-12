@@ -11,6 +11,7 @@ import ConfirmDate from '../pages/ConfirmDate';
 import AlterValSend from '../pages/AlterValSend';
 import Proving from '../pages/Proving';
 import AlterBanks from '../pages/AlterBanks';
+import StatusSend from '../pages/StatusSend';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +67,11 @@ const Routes: React.FC = () => (
       component={AlterBanks}
     />
 
+    <Stack.Screen 
+      name='StatusSend'
+      component={StatusSend}
+      />
+      
   </Stack.Navigator>
 )
 
