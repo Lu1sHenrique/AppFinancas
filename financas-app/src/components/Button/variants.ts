@@ -37,12 +37,12 @@ const buttonPrimary: ButtonVariant = {
 const buttonOutline: ButtonVariant = {
   enabled: {
     button: {
-      backgroundColor: colors.green,
+      backgroundColor: 'transparent',
       borderWidth: 2,
       borderColor: colors.green
     },
     title: {
-      color: colors.white,
+      color: colors.blueBlack,
     },
   },
   disabled: {

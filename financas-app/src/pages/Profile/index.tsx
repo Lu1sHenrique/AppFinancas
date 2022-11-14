@@ -18,7 +18,9 @@ export default function Profile() {
       style={styles.container}
       ListHeaderComponent={
         <>
-          <Header name="Luis Henrique" />
+          <Header
+            name='Luiz Henrique'
+            title='Chave Pix:000.000.000.88' />
 
           <View style={styles.containerTxtAccountsConec}>
             <Text style={styles.txtAccountsConec}>

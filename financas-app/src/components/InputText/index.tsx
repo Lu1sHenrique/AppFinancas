@@ -6,9 +6,11 @@ import styles from './styles';
 
 interface InputTextProps extends TextInputProps {
     textPlaceholder: string;
+    onPress?: () => void;
+    iconName?: keyof typeof Feather.glyphMap;
 }
 
-export function InputText({ textPlaceholder, ...rest }: InputTextProps) {
+export function InputText({ textPlaceholder, iconName, onPress }: InputTextProps) {
 
     return (
 
@@ -18,12 +20,16 @@ export function InputText({ textPlaceholder, ...rest }: InputTextProps) {
                 style={styles.input}>
             </TextInput>
 
-            <TouchableOpacity
-                onPress={() => ''}>
-                    
-                <Feather
-                    style={{ marginEnd: 20 }}
-                    name='chevron-down' size={25} color="#17B978" />
+            <TouchableOpacity>
+                {iconName && (
+                    <Feather
+                        style={{ marginRight: 20 }}
+                        name={iconName}
+                        size={25}
+                        color='#17B978'
+                        onPress={onPress}
+                    />
+                )}
             </TouchableOpacity>
         </View>
 

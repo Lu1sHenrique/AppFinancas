@@ -10,23 +10,16 @@ const styles = StyleSheet.create({
     containerTitle: {
         marginTop: '70%',
         marginBottom: 50,
-        marginHorizontal: 20,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        textAlign: 'center'
-    },
-
-    title: {
-        fontSize: 24,
-        fontWeight: '500',
-        left: 50
+        alignSelf: 'center',
+        marginLeft: '40%',
+        width: '90%'
     },
 
     value: {
         color: colors.green,
-        fontSize: 24,
+        fontSize: 32,
         fontWeight: '500',
-        right: 70
+        right: 20
     },
 })
 

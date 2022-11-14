@@ -7,14 +7,16 @@ import styles from './styles';
 interface ButtonProps {
     title: string;
     description: string | number;
-    onPress?: () => void;// opcional até criação da tela
+    onPress?: () => void;
 }
 
 
 export function InfoSendMoney({ onPress, title, description }: ButtonProps) {
 
     return (
-            <TouchableOpacity onPress={onPress} style={styles.container}>
+        <TouchableOpacity
+            onPress={onPress}
+            style={styles.container}>
             <View >
                 <Text style={styles.date}>
                     {title}
@@ -23,10 +25,10 @@ export function InfoSendMoney({ onPress, title, description }: ButtonProps) {
                     {description}
                 </Text>
             </View>
-                <Ionicons
-                    name="chevron-down"
-                    size={40}
-                    color='#17B978' />
-            </TouchableOpacity>
+            <Ionicons
+                name="chevron-down"
+                size={40}
+                color='#17B978' />
+        </TouchableOpacity>
     );
 }

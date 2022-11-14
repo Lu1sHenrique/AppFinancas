@@ -8,21 +8,22 @@ import ButtonBack from '../../components/Utils/buttonBack';
 import styles from './styles';
 
 export default function AlterValSend() {
-    
+
     const navigation = useNavigation();
     const [loading, setLoading] = useState(false);
 
     function handleSendMoney() {
         setLoading(true);
         setTimeout(() => {
-          setLoading(false);
+            setLoading(false);
         }, 5000);
         console.log('funfo');
         navigation.navigate('ConfirmDate');
     }
     return (
         <>
-            <ButtonBack />
+            <ButtonBack
+                iconName='chevron-back' />
 
             <View style={styles.containerTitle}>
                 <Text style={styles.title}>

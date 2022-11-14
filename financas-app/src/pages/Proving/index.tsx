@@ -24,14 +24,16 @@ export default function Proving() {
     }
 
     return (
-        <View>
-             <ButtonBack />
-            
-             <LottieView
+        <View style={styles.container}>
+
+            <ButtonBack
+                iconName='chevron-back' />
+
+            <LottieView
                 source={require("../../assets/animation_transfer.json")}
-                autoPlay= {true}
+                autoPlay={true}
                 duration={5000}
-                style={{marginBottom: 90}}
+                style={{ marginBottom: 130 }}
             />
 
             <View style={styles.containerTitle}>

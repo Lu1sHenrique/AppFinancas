@@ -32,26 +32,23 @@ export default function AddBanks() {
 
       <View style={styles.containerTitle}>
         <Text style={styles.title}>
-          Qual banco vamos incluir na
+          Atualizando o banco
         </Text>
         <Text style={styles.value}>
-          carteira?
+          banco
         </Text>
       </View>
 
       <ScrollView>
         <InputText
-          onPress={() => { }}
-          iconName='chevron-down'
-          textPlaceholder={'Bancos'} />
-        <InputText
           textPlaceholder={'Agência'} />
         <InputText
-          onPress={() => { }}
-          iconName='chevron-down'
           textPlaceholder={'Número da conta'} />
         <InputText
-          textPlaceholder={'Tipo da conta'} />
+          onPress={() => { }}
+          iconName='chevron-down'
+          textPlaceholder={'Tipo da conta'}
+        />
         <InputText
           textPlaceholder={'Chave pix'} />
 
@@ -72,7 +69,7 @@ export default function AddBanks() {
           variant='outline'
           style={{ marginLeft: 20 }}
           onPress={handleAdicionar}
-          title='Adicionar'
+          title='Atualizar'
         />
 
       </ScrollView>
