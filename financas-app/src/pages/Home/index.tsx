@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AntDesign, Foundation, Feather } from '@expo/vector-icons';
 import { Text, View, FlatList, TextInput } from 'react-native';
 
@@ -63,6 +63,9 @@ const list = [
 
 
 export default function Home() {
+
+    const [searchMov, setSearchMov] = useState('');
+
     return (
         <View style={styles.container}>
 
@@ -79,7 +82,8 @@ export default function Home() {
                         <TextInput
                             placeholder='Buscar'
                             placeholderTextColor={"#808080"}
-                            style={styles.input}>
+                            style={styles.input}
+                            onChangeText={setSearchMov}>
                         </TextInput>
                         <Feather style={{ marginEnd: 20 }} name='search' size={25} color="#808080" />
                     </View>
@@ -88,14 +92,19 @@ export default function Home() {
                 <Text style={styles.title}>Últimas movimentações</Text>
 
                 <FlatList
-                    style={styles.list}
-                    data={list}
-                    keyExtractor={(item) => String(item.id)}
-                    showsVerticalScrollIndicator={false}
-                    renderItem={({ item }) => <Movements data={item} />}
+                style={styles.list}
+                data={list.filter(val => {
+                    if (searchMov === '') {
+                        return val
+                    } else if (val.label.toLocaleLowerCase()
+                        .includes(searchMov.toLocaleLowerCase())) {
+                        return val
+                    }
+                })}
+                renderItem={(itemData) => <Movements data={itemData.item} />}
+                showsVerticalScrollIndicator={false}
                 />
             </View>
         </View>
-
     );
 }
