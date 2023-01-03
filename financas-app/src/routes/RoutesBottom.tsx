@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  View,
+  StyleSheet
+} from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome, Ionicons, Entypo, Octicons } from '@expo/vector-icons';
@@ -7,6 +11,7 @@ import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import AddBanks from '../pages/AddBanks';
 import SelectPaymentAccount from '../pages/SelectPaymentAccount';
+import colors from '../styles/colors';
 
 const Bottom = createBottomTabNavigator();
 
@@ -23,11 +28,11 @@ export default function RoutesFrota(){
           backgroundColor: "#fff",
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
-          height: 70,
+          height: 75,
           paddingTop: 10
         },
-        tabBarActiveTintColor: '#17B978',
-        tabBarInactiveTintColor: '#fff',
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveTintColor: colors.gray,
         tabBarShowLabel:false
       }}
       >
@@ -35,8 +40,10 @@ export default function RoutesFrota(){
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: () => (
-              <Ionicons name="home" color="#dadada" size={30} />
+          tabBarIcon: ({focused, color, size}) => (
+            <View style={[styles.containerButtonTab, {backgroundColor: focused ? colors.green : colors.white}]}>
+              <Ionicons name="home" color={color} size={size}/>
+            </View>
             ),
             tabBarAccessibilityLabel:"Home",
         }}
@@ -46,8 +53,10 @@ export default function RoutesFrota(){
         name="Profile"
         component={Profile}
         options={{
-          tabBarIcon: () => (
-            <FontAwesome name="user" color="#dadada" size={30} />
+          tabBarIcon: ({focused, color, size}) => (
+            <View style={[styles.containerButtonTab, {backgroundColor: focused ? colors.green : colors.white}]}>
+              <FontAwesome name="user" color={color} size={size} />
+            </View>
             ),
             tabBarAccessibilityLabel:"Profile",
           }}
@@ -57,8 +66,10 @@ export default function RoutesFrota(){
         name="SelectPaymentAccount"
         component={SelectPaymentAccount}
         options={{
-          tabBarIcon: () => (
-            <Octicons name="arrow-switch" color="#dadada" size={30} />
+          tabBarIcon: ({focused, color, size}) => (
+            <View style={[styles.containerButtonTab, {backgroundColor: focused ? colors.green : colors.white}]}>
+              <Octicons name="arrow-switch" color={color} size={size} />
+            </View>
             ),
             tabBarAccessibilityLabel:"SelectPaymentAccount",
           }}
@@ -68,8 +79,10 @@ export default function RoutesFrota(){
         name="AddBanks"
         component={AddBanks}
         options={{
-          tabBarIcon: () => (
-            <Entypo name="plus" color="#dadada" size={40} />
+          tabBarIcon: ({focused, color, size}) => (
+            <View style={[styles.containerButtonTab, {backgroundColor: focused ? colors.green : colors.white}]}>
+              <Entypo name="plus" color={color} size={size} />
+            </View>
             ),
             tabBarAccessibilityLabel:"AddBanks",
           }}
@@ -77,5 +90,16 @@ export default function RoutesFrota(){
     </Bottom.Navigator>
   )
 };
+
+const styles = StyleSheet.create({
+  containerButtonTab:{
+    borderRadius:60, 
+    width: 60, 
+    height:60, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    marginBottom: 10
+  }
+})
 
 
