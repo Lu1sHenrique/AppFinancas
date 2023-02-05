@@ -5,7 +5,9 @@
 <p>
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Lu1sHenrique/AppFinancas?style=flat-square">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Lu1sHenrique/AppFinancas?style=flat-square">
+![Repository size](https://img.shields.io/github/repo-size/Lu1sHenrique/AppFinancas)
+
+![GitHub issues](https://img.shields.io/github/issues/Lu1sHenrique/AppFinancas)
 
   <a href="https://github.com/Lu1sHenrique/AppFinancas/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Lu1sHenrique/AppFinancas?style=flat-square">
