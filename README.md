@@ -2,9 +2,13 @@
   App-Financas
 </h1>
 
+<div style="text-align: center">
+
 ![GitHub language count](https://img.shields.io/github/languages/count/Lu1sHenrique/AppFinancas?style=flat-square)
 ![Repository size](https://img.shields.io/github/repo-size/Lu1sHenrique/AppFinancas?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/Lu1sHenrique/AppFinancas?style=flat-square)
+
+</div>
 
 <p align="center">
   <a href="#-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -13,7 +17,6 @@
   <a href="#-Licença">Licença</a>
 </p>
 
-</p>
 
 
 > Status do Projeto: ⚠️  (desenvolvimento)
