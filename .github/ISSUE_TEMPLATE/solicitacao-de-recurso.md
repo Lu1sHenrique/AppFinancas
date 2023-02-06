@@ -3,6 +3,7 @@ name: Solicitação de recurso
 about: Sugira uma ideia para este projeto
 title: ''
 labels: enhancement
+projects: app-financas
 assignees: Lu1sHenrique
 
 ---
