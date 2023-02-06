@@ -6,7 +6,7 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/Lu1sHenrique/AppFinancas?style=flat-square)
 ![Repository size](https://img.shields.io/github/repo-size/Lu1sHenrique/AppFinancas?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/Lu1sHenrique/AppFinancas?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Norte-Tecnologia/app-financas?style=flat-square)
 
 </div>
 
