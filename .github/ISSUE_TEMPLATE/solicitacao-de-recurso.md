@@ -1,7 +1,7 @@
 ---
 name: Solicitação de recurso
 about: Sugira uma ideia para este projeto
-title: "[FEAT]"
+title: 'FEAT: '
 labels: enhancement
 assignees: ''
 
