@@ -1,9 +1,9 @@
 ---
 name: Relatório de erro
 about: Crie um relatório para nos ajudar a melhorar
-title: ''
+title: 'BUG: '
 labels: bug
-assignees: Lu1sHenrique
+assignees: ''
 
 ---
 
