@@ -1,10 +1,9 @@
 ---
 name: Solicitação de recurso
 about: Sugira uma ideia para este projeto
-title: ''
+title: "[FEAT]"
 labels: enhancement
-projects: app-financas
-assignees: Lu1sHenrique
+assignees: ''
 
 ---
 
