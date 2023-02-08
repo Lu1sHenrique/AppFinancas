@@ -17,6 +17,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             "/swagger-ui.html",
+            "/status"
     };
 
     @Override
